@@ -116,8 +116,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a536dbaaa32c6fa4a892af65f841901e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tmpText: {fileID: 0}
+  playerCamera: {fileID: 0}
   bulletPrefab: {fileID: 4191241617300629671, guid: 7f79b3171a70421409a5e75204065ae8, type: 3}
   bulletSpawn: {fileID: 57151838471862869}
+  magSize: 3
+  reloadTime: 2
+  shootingDelay: 0.2
   bulletVelocity: 30
   bulletPrefabLifeTime: 3
-  shootingInterval: 0.3
+  spreadIntensity: 0.1
+  isShooting: 1
+  readyToShoot: 0
+  isReloading: 0
+  bulletsLeft: 0
+  currentShootingMode: 2

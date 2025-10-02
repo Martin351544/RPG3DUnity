@@ -1,9 +1,11 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     [Header("References")]
+    public TextMeshProUGUI tmpText;
     public Camera playerCamera;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
@@ -29,6 +31,7 @@ public class Weapon : MonoBehaviour
 
     public enum ShootingMode { Single, Burst, Auto }
     public ShootingMode currentShootingMode;
+    
 
     void Awake()
     {
@@ -37,7 +40,13 @@ public class Weapon : MonoBehaviour
         burstBulletsLeft = magSize;
     }
 
-    void Update()
+    private void Update() 
+    {
+        tmpText.text = magSize+ "/" + bulletsLeft;
+        
+    }
+
+    void FixedUpdate()
     {
         // --- Input ---
         if (currentShootingMode == ShootingMode.Auto)
